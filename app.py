@@ -12,8 +12,6 @@ app = Flask(__name__, static_url_path='/static')
 UPLOAD_FOLDER = 'static'
 ALLOWED_EXTENSIONS = set(['pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
-print("123123")
-
 config = configparser.ConfigParser()
 config.read('config.ini')
 
@@ -236,8 +234,8 @@ def pushMessage(payload):
 
 
 def getTotalSentMessageCount():
-    response = {}
-    return 0
+    response = requests.post("https://api.line.me/v2/bot/message/quota",headers=HEADER)
+    return response
 
 
 def getTodayCovid19Message():
