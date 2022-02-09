@@ -58,7 +58,7 @@ def index():
                                 "text": getTotalSentMessageCount()
                             }
                         ]
-                elif text == "今日確診人數":
+                elif text == "最新確診人數":
                     payload["messages"] = [
                             {
                                 "type": "text",
@@ -243,7 +243,7 @@ def getTodayCovid19Message():
     date = response.json()[0]["a04"]
     total_count = response.json()[0]["a05"]
     count = response.json()[0]["a06"]
-    return F"最新疫情資訊\n日期：{date}, 人數：{count}, 確診總人數：{total_count}"
+    return F"最新疫情資訊\n日期：{date}\n人數：{count}\n確診總人數：{total_count}"
 
 
 def allowed_file(filename):
