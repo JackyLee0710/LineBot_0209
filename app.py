@@ -174,8 +174,8 @@ def getNameEmojiMessage():
     message['emojis'] = []
     count = 0
     for i in lookUpStr:
-        count += 1
         message['emojis'].append({"index": count, "productId": "5ac21b4f031a6752fb806d59", "emojiId": i})
+        count += 1
     print(message)
     return message
 
