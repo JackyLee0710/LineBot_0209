@@ -12,6 +12,8 @@ app = Flask(__name__, static_url_path='/static')
 UPLOAD_FOLDER = 'static'
 ALLOWED_EXTENSIONS = set(['pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
+print("123")
+
 config = configparser.ConfigParser()
 config.read('config.ini')
 
