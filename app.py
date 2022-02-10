@@ -360,11 +360,11 @@ def line_login():
             name = content["displayName"]
             userID = content["userId"]
             pictureURL = content["pictureUrl"]
-            statusMessage = content["statusMessage"]
+            # statusMessage = content["statusMessage"]
             print(content)
             return render_template('profile.html', name=name, pictureURL=
-                                   pictureURL, userID=userID, statusMessage=
-                                   statusMessage)
+                                   pictureURL, userID=userID)#, statusMessage=
+                                   # statusMessage)
         else:
             return render_template('login.html', client_id=line_login_id,
                                    end_point=end_point)
