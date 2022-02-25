@@ -28,6 +28,9 @@ HEADER = {
     'Authorization': F'Bearer {config.get("line-bot", "channel_access_token")}'
 }
 
+def pp():
+    print('-'*100)
+    
 
 @app.route("/", methods=['POST', 'GET'])
 def index():
