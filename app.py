@@ -366,8 +366,9 @@ def line_login():
                                    pictureURL, userID=userID)#, statusMessage=
                                    # statusMessage)
         else:
-            return render_template('login.html', client_id=line_login_id,
-                                   end_point=end_point)
+            return redirect(f'https://access.line.me/oauth2/v2.1/authorize?'response_type=code&client_id={client_id}&redirect_uri={end_point}/line_login&scope=profile%20openid%20email&state=123453sdfgfd') 
+#             return render_template('login.html', client_id=line_login_id,
+#                                    end_point=end_point)
 
 
 if __name__ == "__main__":
